@@ -1,5 +1,3 @@
-import option
-from DataSet import DataSet
 from HiddenLayer import HiddenLayer
 from OutputLayer import OutputLayer
 
@@ -17,5 +15,4 @@ class NeuralNetwork:
         resultF3 = self.HL.F3.feedForward(data)
 
         resultO1 = self.OL.O1.feedForward([resultF1, resultF2, resultF3])
-
         return resultO1
