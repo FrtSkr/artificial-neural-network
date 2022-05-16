@@ -16,3 +16,17 @@ class NeuralNetwork:
 
         resultO1 = self.OL.O1.feedForward([resultF1, resultF2, resultF3])
         return resultO1
+
+    def sigmoid_derivative(self, data): # data değişkenine her nöronun net çıktı değeri gelecek
+        return data * (1 - data)
+
+    def MSE(self, data): # data değişkenine 1 epoch sonucunda oluşan hataların dizisi gelecek
+        result = 0
+        for i in data:
+            result += data**2
+
+        result = result / len(data)
+        return result
+
+    def MSE_derivative(self, data): # data değişkenine her iterasyon sonucunda oluşan hata değeri gelecek
+        return -2 * data
