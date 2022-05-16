@@ -27,6 +27,3 @@ class NeuralNetwork:
 
         result = result / len(data)
         return result
-
-    def MSE_derivative(self, data): # data değişkenine her iterasyon sonucunda oluşan hata değeri gelecek
-        return -2 * data
